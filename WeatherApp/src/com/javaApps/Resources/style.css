@@ -12,7 +12,9 @@ and open the template in the editor.
   -fx-background-repeat: no-repeat;
   -fx-background-position: right center;
   -fx-font-size: 14;
-  -fx-min-width: 10;
+}
+*#root{
+    -fx-background-color: #ffffff;
 }
 
 #title{
@@ -21,5 +23,13 @@ and open the template in the editor.
 }
 
 .card{
-    
+    -fx-border-color: #e3e3e3;
+    -fx-border-width: 1;
+    -fx-border-style: solid;
+    -fx-background-color: rgb(242, 242, 242);
+}
+
+.day-label{
+    -fx-text-fill: #009933;
+    -fx-font-size: 20;
 }

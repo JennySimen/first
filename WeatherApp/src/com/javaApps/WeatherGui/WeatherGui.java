@@ -8,8 +8,6 @@ package com.javaApps.WeatherGui;
 import com.jfoenix.controls.JFXTextField;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -31,8 +29,6 @@ public class WeatherGui extends Stage{
     
     //Cards
     public VBox yesterdayVbox = new VBox();
-//    public Image yestImage = new Image("");
-//    public ImageView yestImageView = new ImageView();
     public Label yestDayLabel = new Label("YESTERDAY");
     public Label yestDateLabel = new Label("DATE: ");
     public Label yestTemperatureLabel = new Label("TEMPERATURE: ");
@@ -40,8 +36,6 @@ public class WeatherGui extends Stage{
     public Label yestCloudsLabel = new Label("CLOUDS: ");
     
     public VBox todayVbox = new VBox();
-//    public Image todayImage = new Image("");
-//    public ImageView todayImageView = new ImageView();
     public Label todayDayLabel = new Label("TODAY");
     public Label todayDateLabel = new Label("DATE: ");
     public Label todayTemperatureLabel = new Label("TEMPERATURE: ");
@@ -49,8 +43,6 @@ public class WeatherGui extends Stage{
     public Label todayCloudsLabel = new Label("CLOUDS: ");
     
     public VBox tomorrowVbox = new VBox();
-//    public Image tomorrowImage = new Image("");
-//    public ImageView tomorrowImageView = new ImageView();
     public Label tomorrowDayLabel = new Label("TOMORROW");
     public Label tomorrowDateLabel = new Label("DATE: ");
     public Label tomorrowTemperatureLabel = new Label("TEMPERATURE: ");
