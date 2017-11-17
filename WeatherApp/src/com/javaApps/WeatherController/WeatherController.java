@@ -12,6 +12,10 @@ package com.javaApps.WeatherController;
 
 //Import the GUI
 import com.javaApps.WeatherGui.WeatherGui;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -65,6 +69,11 @@ public class WeatherController {
         yestImageView.setFitHeight(100.0);
         yestImageView.setFitWidth(100.0);
         
+        //Show yesterday's date
+        weatherGUI.yestDateLabel.setText(
+                weatherGUI.yestDateLabel.getText() + getYesterdayDate()
+        );
+        
         weatherGUI.yesterdayVbox.getChildren().addAll(
                 weatherGUI.yestDayLabel,
                 weatherGUI.yestDateLabel,
@@ -88,6 +97,11 @@ public class WeatherController {
         todayImageView.setFitHeight(100.0);
         todayImageView.setFitWidth(100.0);
         
+        //show today's date
+        weatherGUI.todayDateLabel.setText(
+                weatherGUI.todayDateLabel.getText() + getTodayDate()
+        );
+        
         weatherGUI.todayVbox.getChildren().addAll(
                 weatherGUI.todayDayLabel,
                 weatherGUI.todayDateLabel,
@@ -110,6 +124,10 @@ public class WeatherController {
         tomorrowImageView = new ImageView(tomorrowImage);
         tomorrowImageView.setFitHeight(100.0);
         tomorrowImageView.setFitWidth(100.0);
+        
+        weatherGUI.tomorrowDateLabel.setText(
+                weatherGUI.tomorrowDateLabel.getText() + getTommorowDate()
+        );
         
         weatherGUI.tomorrowVbox.getChildren().addAll(
                 weatherGUI.tomorrowDayLabel,
@@ -149,6 +167,27 @@ public class WeatherController {
         weatherGUI.show();
     }
    
-   
+   //get yesterdaý's date
+    public String getYesterdayDate(){
+        final Calendar calender = Calendar.getInstance();
+        DateFormat dateFormat = new SimpleDateFormat(" dd/MM/yyyy");
+        calender.add(Calendar.DATE, -1);
+        return dateFormat.format(calender.getTime());
+    }
+    
+    //tomorrows date
+    public String getTommorowDate(){
+        final Calendar calender = Calendar.getInstance();
+        DateFormat dateFormat = new SimpleDateFormat(" dd/MM/yyy");
+        calender.add(Calendar.DATE, +1);
+        return dateFormat.format(calender.getTime());
+    }
+    
+    //get today's date
+    public String getTodayDate(){
+        final Calendar calender = Calendar.getInstance();
+        DateFormat dateFormat = new SimpleDateFormat(" dd/MM/yyy");
+        return dateFormat.format(calender.getTime());
+    }
     
 }
