@@ -1,0 +1,20 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    text-field {
+    -fx-background-color: #cccccc;
+}
+.button {
+   fx-graphic: url("../css/dentist.jpg");
+}
+.bodybg{
+ -fx-background-size: 100% 100%;
+}
+.anchorPane {
+    -fx-background-color: #3399ff;
+}
+
+
+}
